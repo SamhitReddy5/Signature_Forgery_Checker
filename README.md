@@ -27,26 +27,31 @@ The system automates signature verification without manual feature extraction, m
 
 ## Project Structure  
 
-Signature_Forgery_Checker/  
-│  
-├── app/  
-│   ├── ui.py                # Main application UI (entry point)  
-│   ├── predict.py           # Signature verification logic  
-│   ├── preprocess.py        # Image preprocessing  
-│  
-├── model/  
-│   ├── train.py             # Training script  
-│   ├── siamese_model.py     # Model architecture  
-│  
-├── dataset/  
-│   └── sample/              # Small sample dataset  
-│  
-├── assets/  
-│   └── screenshots/         # Screenshots for README  
-│  
-├── requirements.txt         # Dependencies  
-├── .gitignore               # Ignored files  
-├── README.md                # Documentation  
+Signature_Forgery_Checker/
+│
+├── app/
+│   ├── main.py
+│   ├── predict_siamese.py
+│   ├── flask_app.py        
+│
+├── templates/
+│   └── index.html
+│
+├── assets/
+│   └── screenshots/
+│       ├── app.png
+│       ├── genuine.png
+│       ├── forged.png
+│
+├── sample_inputs/
+│   ├── test.png
+│   ├── test1.png
+│   ├── test2.png
+│
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── run_app.command
 
 ---
 
