@@ -1,9 +1,9 @@
 # Signature Forgery Detection using Siamese Neural Networks
 
 ## Overview  
-This project implements an offline signature verification system using a Siamese Convolutional Neural Network (CNN). The model compares two signature images and determines whether they belong to the same person (genuine) or if one is forged.  
+This project implements an offline signature verification system using a Siamese Convolutional Neural Network (CNN). The system compares two signature images and predicts whether they belong to the same person (genuine) or if one is forged.  
 
-The system automates signature verification without manual feature extraction, making it efficient and scalable.
+The approach uses deep learning to automatically learn features from signatures, avoiding manual feature engineering.
 
 ---
 
@@ -11,8 +11,8 @@ The system automates signature verification without manual feature extraction, m
 - Siamese Neural Network architecture  
 - Image preprocessing (grayscale, resizing, normalization)  
 - Similarity-based comparison  
-- Desktop-based application  
-- Fast and lightweight inference  
+- Desktop-compatible execution  
+- Fast inference  
 
 ---
 
@@ -27,70 +27,68 @@ The system automates signature verification without manual feature extraction, m
 
 ## Project Structure  
 
-Signature_Forgery_Checker/
-│
-├── app/
-│   ├── main.py
-│   ├── predict_siamese.py
-│   ├── flask_app.py        
-│
-├── templates/
-│   └── index.html
-│
-├── assets/
-│   └── screenshots/
-│       ├── app.png
-│       ├── genuine.png
-│       ├── forged.png
-│
-├── sample_inputs/
-│   ├── test.png
-│   ├── test1.png
-│   ├── test2.png
-│
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── run_app.command
+Signature_Forgery_Checker/  
+│  
+├── app/  
+│   ├── main.py  
+│   ├── predict_siamese.py  
+│   ├── flask_app.py  
+│  
+├── templates/  
+│   └── index.html  
+│  
+├── assets/  
+│   └── screenshots/  
+│       ├── app.png  
+│       ├── genuine.png  
+│       ├── forged.png  
+│  
+├── sample_inputs/  
+│   ├── test.png  
+│   ├── test1.png  
+│   ├── test2.png  
+│  
+├── requirements.txt  
+├── README.md  
+├── .gitignore  
+├── run_app.command  
 
 ---
 
 ## How It Works  
 
-1. Two signature images are given as input  
+1. Two signature images are provided as input  
 2. Both images pass through identical CNN branches  
-3. The network extracts feature embeddings  
+3. Feature embeddings are extracted  
 4. A similarity score is computed  
-5. Based on a threshold, the output is classified as:  
-   - Genuine  
-   - Forged  
+5. Based on a threshold, the system classifies the result as genuine or forged  
 
 ---
 
 ## How to Run  
 
-1. Install dependencies  
+Install dependencies:  
 pip3 install -r requirements.txt  
 
-2. Run the application  
-python3 app/ui.py  
+Run the application:  
+python3 app/main.py  
 
 ---
 
 ## Results  
 
-- The model can differentiate between genuine and forged signatures  
+- The model can distinguish between genuine and forged signatures  
 - Performance depends on dataset quality and training balance  
-- Threshold tuning improves accuracy  
+- Threshold tuning improves prediction reliability  
 
 ---
 
 ## Future Improvements  
 
-- Use a larger dataset  
-- Improve robustness to variations  
+- Train on a larger dataset  
+- Improve robustness to variations in writing style  
 - Add real-time signature capture  
-- Deploy as mobile or web app  
+- Deploy as a standalone desktop application  
 
 ---
 
@@ -103,8 +101,8 @@ Manipal Institute of Technology
 
 ## Notes  
 
-- Model file is not included due to size  
-- Can be shared separately if needed
+- Large model files are not included in this repository  
+- The trained model can be shared via external storage if required
 
 ## Demo
 
