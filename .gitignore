@@ -1,0 +1,10 @@
+.venv/
+*.pyc
+.DS_Store
+build/
+dist/
+data/
+flagged/
+*.spec
+*.dylib
+*.keras
